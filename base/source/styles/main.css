@@ -4,7 +4,9 @@
 /* Переменные */
 :root {
    --bg: #f3f3f3; /* Цвет фона */
-   --color: hsl(0 0% 13% / 1); /* Цвет текста */
+   --bg-border: hsl(0, 0%, 62%); /* Цвет для границы */
+   --color1: hsl(0 0% 13% / 1); /* Цвет текста светлом фоне */
+   --color2: #f3f3f3; /* Цвет текста на темном фоне*/
    --bg-effect1: #00859f; 
    --bg-effect2: #9d6e34; 
    --font: 16px / 1.2 Tahoma, Geneva, Verdana, sans-serif; /* шрифт текста */
@@ -20,28 +22,48 @@
 .page {
    font: var(--font);
    background-color: var(--bg);
-   color: var(--color);
+   color: var(--color1);
    width: 100%;
    height: 100%;
+   padding: 24px;
 }
 .left-nav, 
 .header, 
 .contact {
-   padding: 32px 24px;
+   padding: 24px;
 }
 /* Навигация */
 .left-nav {
    float: left;
-   width: 25%;
-   border-right: 1px solid var(--color);
+   width: 300px;
 }
 /* Баннер */
 .header {
    float: right;
-   width: 70%;
+   max-width: 900px;
+   width: 100%;
+   height: 80vh;
+   margin: 24px 0;
+   background-color: var(--bg-effect1);
+   color: var(--color2);
 }
 /* Подвал */
 .contact {
    clear: both;
    width: 100%;
+   background-color: var(--bg-effect1);
+    color: var(--color2);
+}
+
+
+.left-nav ul li {
+   position: relative;
+}
+.left-nav ul li ul {
+   display: none;
+   transition: .6s;
+}
+.left-nav ul li:hover ul {
+   display: inline-block; 
+   position: absolute;
 }
