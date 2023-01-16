@@ -47,11 +47,6 @@ small {
    /* установка размера текста */
    font-size: 80%;
 }
-ol,
-ul {
-   /* сбрасываем метки в списках */
-   list-style-type: none;
-}
 table {
    /* устанавливаем в таблицах рамку */
    border-collapse: collapse;

@@ -1,68 +1,94 @@
 <!DOCTYPE html>
 <html lang="ru">
-   <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <title>Заметки разработчика</title>
-      <link rel="stylesheet" href="source/fonts/Acrom/stylesheet.css">
-      <link rel="stylesheet" href="source/styles/main.css">
-   </head>
-   <!-- Страница, лист-->
-   <body class="page" id="home">
-      <!-- Контейнер -->
-      <div class="container">
-         <!-- Блок навигации -->
-         <nav class="box-nav">
-            <!-- Блок логотипа -->
-            <div class="logo">
-               <span>Developer<br> Note's</span>
-            </div>
-            <!-- Навигация -->
-            <div class="nav">
-               <ul>
-                  <li><a href="source/pages/html.html">HTML</a></li>
-                  <li><a href="source/pages/css.html">CSS</a></li>
-                  <li><a href="source/pages/js.html">JAVASCRIPT</a></li>
-                  <li><a href="source/pages/php.html">PHP</a></li>
-                  <li><a href="source/pages/sql.html">SQL</a></li>
-                  <li><a href="source/pages/others.html">ПРОЧЕЕ</a></li>
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>pattern-site</title>
+   <link rel="stylesheet" href="/base/source/fonts/Acrom/stylesheet.css">
+   <link rel="stylesheet" href="source/styles/main.css">
+</head>
+<!-- Страница, лист-->
+<body class="body" id="home-page">
+   <!-- Контейнер -->
+   <div class="container">
+      <!-- Шапка -->
+      <header class="header">
+         <h1 class="header__title">Developer note's</h1>
+      </header>
+      <!-- Блок навигационного списка-->
+      <nav class="nav">
+         <h2 class="nav__title" >Заметки</h2class>
+         <!-- Обертка всех списков -->
+         <div class="nav-inner-wrap">
+            <!-- Обертка списка + Заголовок-->
+            <div class="wrap-list">
+               <h3 class="wrap-list__title">HTML</h3>
+               <ul class="list">
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
                </ul>
             </div>
-            <!-- Блок контактов -->
-            <div class="contact">
-               <ul>
-                  <li><a href="mailto:KurtsouKiryl@outlook.com">Mail</a></li>
-                  <li><a href="#">LinkedIn</a></li>
-                  <li><a href="#">Github</a></li>
+            <div class="wrap-list">
+               <h3 class="wrap-list__title">CSS</h3>
+               <ul class="list">
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
                </ul>
             </div>
-         </nav>
-         <!-- Блок контента -->
-         <div class="box-content">
-            <!-- Шапка -->
-            <header class="header">
-               <h1>Заметки <br> разработчика</h1>
-               <h2>На пути к Full-steck</h2>
-            </header>
-            <!-- Блок с анимацией -->
-            <div class="anim">
-               <!-- блоки для анимации, выходят с фиксированного нав-бара и заходят за сайт-->
-               <div class="container-cube">
-                  <div class="cube">
-                     <div class="face top">2</div>
-                     <div class="face bottom">4</div>
-                     <div class="face left">5</div>
-                     <div class="face right">3</div>
-                     <div class="face front">1</div>
-                     <div class="face back">6</div>
-                  </div>
-               </div>
+            <div class="wrap-list">
+               <h3 class="wrap-list__title">JAVASCRIPT</h3>
+               <ul class="list">
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+               </ul>
             </div>
-            <!-- Подвал -->
-            <footer class="footer">
-               <small>&copy;&nbsp;2022&ndash;2023&nbsp;Работы защищены моим трудолюбием.</small>
-            </footer>
+            <div class="wrap-list">
+               <h3 class="wrap-list__title">PHP</h3>
+               <ul class="list">
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+               </ul>
+            </div>
+            <div class="wrap-list">
+               <h3 class="wrap-list__title">SQL</h3>
+               <ul class="list">
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+               </ul>
+            </div>
+            <div class="wrap-list">
+               <h3 class="wrap-list__title">Прочее</h3>
+               <ul class="list">
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+                  <li class="list__item"><a href="#" class="list__item-link">Lorem</a></li>
+               </ul>
+            </div>
          </div>
-      </div>
-   </body>
+      </nav>
+      <!-- Подвал -->
+      <footer class="footer">
+         <h2 class="footer__title">Контакты</h2>
+         <!-- Обертка списка контактов -->
+         <div class="wrap-contact-list">
+            <ul class="contact-list">
+               <li class="contacts-list__item"><a href="#" class="contacts-list__item-link">Почта</a></li>
+               <li class="contacts-list__item"><a href="#" class="contacts-list__item-link">Линкедин</a></li>
+               <li class="contacts-list__item"><a href="#" class="contacts-list__item-link">ГитХаб</a></li>
+               <li class="contacts-list__item"><a href="#" class="contacts-list__item-link">Портфолио</a></li>
+            </ul>
+         </div>
+         <!-- -->
+         <small class="footer-copy">&copy;&nbsp;Все мои работы защищены моим трудолюбием.</small>        
+      </footer>
+   </div>
+   <!-- Скрипты -->
+   <script></script>
+</body>
 </html>

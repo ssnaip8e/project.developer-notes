@@ -1,224 +1,33 @@
 /*===============================
-   Сброс стилей браузера
+   Мини-сброс браузера
 =============================== */
 @import url(reset.css);
 
-/* Переменные */
+/*===========================
+   Переменные
+===========================*/
 :root {
-   --bg: #f3f3f3; /* Цвет фона */
-   --bg-grey: hsl(0, 0%, 62%); /* Цвет для границы */
-   --color-dark: hsl(0 0% 13% / 1); /* Цвет текста светлом фоне */
-   --color-light: #f3f3f3; /* Цвет текста на темном фоне*/
-   --bg-blue: #0a7183; 
-   --bg-tan: #733224; 
-   --font: 16px / 1 Acrom; /* шрифт текста */
-   
+   --font: 16px / 1 Acrom;
+
+   --white: #ffffff;
+   --black: #000000;
+   --tomato: tomato;
+   --grey-middle: dimgray;
+   --green-dark: darkolivegreen;
 }
 /*=========================
    Стили для BODY
 ============================*/
-.page {
-   font: var(--font);
-   background-color: var(--bg);
-   color: var(--color-dark);
+.body {
    width: 100%;
-   height: 100%;   
-}
-/*==========================
-   Контейнер
-============================*/
-.container {
-   max-width: 1200px;
-   margin: 0 auto;
-}
-/* Внутреннее поле для 2 блоков (навигации и контента)*/
-.box-nav, .box-content {
-   padding: 24px;
-}
-/*=================================
-   Стили для блока навигации
-====================================*/
-/* Блок навигации */
-.box-nav {
-   width: 299px;
    height: 100%;
-   display: flex;
-   flex-flow: column;
-   justify-content: space-between;
-   position: fixed;
-   border-right: 1px solid var(--bg-grey);
-   z-index: 1;
-}
-/*   */
-.logo,
-.nav,
-.contact {
-   text-align: center;
-}
-.logo > span {
-   color: var(--bg-blue);
-}
 
+   font: var(--font);
 
-.nav ul {
-   border-left: 2px solid var(--bg-tan);
-}
-.nav ul li {
-   margin-bottom: 0.3rem;
-}
-.nav ul li a {
-   display: block;
-   padding: .5rem 1rem;
-   text-decoration: none;
-   color: var(--bg-grey);
-}
+   color: var(--black); 
 
+   background-color: var(--white);  
+}
+/*============================
 
-
-
-
-
-
-
-/*===================================
-   Стили для блока с контентом:
-   -шапка в роли баннера
-   -блок анимаций
-   -подвал
-====================================*/
-/* Блок контента */
-.box-content {
-   max-width: 900px;
-   margin-left: 300px;
-   height: 100vh;
-   display: flex;
-   flex-flow: column wrap;
-   justify-content: space-between;
-}
-/* Шапка */
-.header {
-   max-width: 800px;
-   min-height: 300px;
-}
-/* Заголовок 1-уровня */
-.header > h1 {
-   font-size: 6rem;
-   font-weight: 600;
-   margin: 0 0 24px 0;
-   color: var(--bg-blue);
-}
-/* Заголовок 2-уровня */
-.header > h2 {
-   font-size: 2rem;
-   font-weight: 400;
-   color: var(--bg-tan);
-}
-/* Общий для заголовков */
-.header h1,
-.header h2 {
-   text-align: end;
-}
-/* Блок с анимациями */
-.container-cube {
-   width: 10rem;
-   height: 10rem;
-   perspective: 500px;
-   margin: 5rem;
-   padding-left: 2rem;
-}
-
-.cube {
-   position: relative;
-   width: 10rem;
-   height: 10rem;
-   transform-style: preserve-3d;
-   transform: rotate3d(1, 1, 0, 45deg);
-   color: white;
-   animation-name: cube;
-   animation-direction: alternate;
-   animation-iteration-count: infinite;
-   animation-duration: 15s;
-}
-
-.face {
-   width: 10rem;
-   height: 10rem;
-   background-color: #d89deb;
-   border: 2px solid #311443;
-   position: absolute;
-   opacity: .5;
-   text-align: center;
-
-}
-
-.back {
-   transform: rotateY(180deg);
-   animation-name: back;
-}
-.left {
-   transform: rotateY(-90deg) ;
-   animation-name: left;
-}
-.right{
-   transform: rotateY(90deg);
-   animation-name: right;
-}
-.top {
-   transform: rotateX(90deg);
-   animation-name: top;
-}
-.bottom {
-   transform: rotateX(-90deg);
-   animation-name: bottom;
-}
-.front {
-   animation-name: front;
-}
-
-.face,
-.back,
-.top,
-.bottom,
-.left,
-.right {
-   animation-duration: 15s;
-   animation-delay: 5s;
-   animation-direction: alternate;
-   animation-iteration-count: infinite;
-}
-
-@keyframes front {
-   from {}
-   to {transform: translateZ(5rem);}
-}
-@keyframes back {
-   from {}
-   to {transform: rotateY(180deg) translateZ(5rem);}
-}
-@keyframes left {
-   from {}
-   to {transform: rotateY(-90deg) translateZ(5rem);}
-}
-@keyframes right {
-   from {}
-   to {transform: rotateY(90deg) translateZ(5rem);}
-}
-@keyframes bottom {
-   from {}
-   to {transform: rotateX(-90deg) translateZ(5rem);}
-}
-@keyframes top {
-   from {}
-   to {transform: rotateX(90deg) translateZ(5rem);}
-}
-@keyframes cube {
-   from {}
-   to {transform: 
-      rotateX(140deg);}
-}
-
-
-/* Подвал */
-.footer {
-   text-align: center;
-}
+===============================*/
