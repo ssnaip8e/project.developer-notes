@@ -5,5 +5,5 @@
    padding: 1.5rem;
 }
 .nav-list__link:hover {
-   background-image: linear-gradient(to top, #333, #df261f);
+   background-color: #df261f;
 }

@@ -13,7 +13,39 @@
 @import url(common.block/copy/copy.css);
 /* Стили других страниц */
 @import url(common.block/content/__title/content__title.css);
+
+@import url(common.block/content/__title/content__title.css);
+@import url(common.block/content/__title/content__title.css);
+@import url(common.block/content/__title/content__title.css);
+@import url(common.block/content/__title/content__title.css);
 /* Стили миксованные */
 @import url(mix.block/center/center.css);
 @import url(mix.block/decor-none/decor-none.css);
 @import url(mix.block/list-style-none/list-style-none.css);
+
+.content-info {
+   max-width: 1000px;
+   margin: 0 auto;
+}
+.blockquote {
+   font-size: 1.2rem;
+}
+.cite {
+   display: block;
+   text-align: end;
+}
+.content-source {
+   padding: 1rem;
+   text-align: center;
+}
+.content-source__link {
+   display: inline-block;
+   padding: .5rem;
+   color: #333;
+}
+.content-source__link:hover {
+   outline: 2px dashed #df261f;
+}
+.content-code {
+
+}
