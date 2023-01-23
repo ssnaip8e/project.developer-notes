@@ -1,0 +1,19 @@
+/* Стили прописывались от главной страницы
+ и выполнялнялись по методологии БЭМ */
+@import url(common.block/body/body.css);
+@import url(common.block/container/container.css);
+@import url(common.block/nav/nav.css);
+@import url(common.block/nav-list/nav-list.css);
+@import url(common.block/nav-list/__link/nav-list__link.css);
+@import url(common.block/header/__title/header__title.css);
+@import url(common.block/main/main.css);
+@import url(common.block/main-inner/main-inner.css);
+@import url(common.block/main-inner/__title.css/main-inner__title.css);
+@import url(common.block/list/__link/list__link.css);
+@import url(common.block/copy/copy.css);
+/* Стили других страниц добавлялись в общий CSS, чтоб оттуда переносить */
+@import url(common.block/content/__title/content__title.css);
+/* Стили миксованные */
+@import url(mix.block/center/center.css);
+@import url(mix.block/decor-none/decor-none.css);
+@import url(mix.block/list-style-none/list-style-none.css);
