@@ -11,7 +11,7 @@
 @import url(common.block/main-inner/__title.css/main-inner__title.css);
 @import url(common.block/list/__link/list__link.css);
 @import url(common.block/copy/copy.css);
-/* Стили других страниц добавлялись в общий CSS, чтоб оттуда переносить */
+/* Стили других страниц */
 @import url(common.block/content/__title/content__title.css);
 /* Стили миксованные */
 @import url(mix.block/center/center.css);
