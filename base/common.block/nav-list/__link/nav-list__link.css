@@ -1,9 +1,6 @@
 .nav-list__link {
-   color: #fff;
+   color: #df261f;
    font-size: 1.3rem;
    font-weight: 600;
    padding: 1.5rem;
-}
-.nav-list__link:hover {
-   background-color: #df261f;
 }

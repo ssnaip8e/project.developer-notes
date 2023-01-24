@@ -22,6 +22,7 @@
 @import url(mix.block/center/center.css);
 @import url(mix.block/decor-none/decor-none.css);
 @import url(mix.block/list-style-none/list-style-none.css);
+@import url(mix.block/hover/hover.css);
 
 .content-info {
    max-width: 1000px;
@@ -45,7 +46,4 @@
 }
 .content-source__link:hover {
    outline: 2px dashed #df261f;
-}
-.content-code {
-
 }
