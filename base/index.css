@@ -4,46 +4,38 @@
 @import url(common.block/container/container.css);
 @import url(common.block/nav/nav.css);
 @import url(common.block/nav-list/nav-list.css);
-@import url(common.block/nav-list/__link/nav-list__link.css);
-@import url(common.block/header/__title/header__title.css);
-@import url(common.block/main/main.css);
-@import url(common.block/main-inner/main-inner.css);
-@import url(common.block/main-inner/__title.css/main-inner__title.css);
-@import url(common.block/list/__link/list__link.css);
+@import url(common.block/nav-list/nav-list__link.css);
+@import url(common.block/header/header__title.css);
+@import url(common.block/content/content.css);
+@import url(common.block/block/block.css);
+@import url(common.block/block/block__title.css);
+@import url(common.block/block-list/block-list.css);
+@import url(common.block/block-list/block-list__link.css);
 @import url(common.block/copy/copy.css);
 /* Стили других страниц */
-@import url(common.block/content/__title/content__title.css);
 
-@import url(common.block/content/__title/content__title.css);
-@import url(common.block/content/__title/content__title.css);
-@import url(common.block/content/__title/content__title.css);
-@import url(common.block/content/__title/content__title.css);
-/* Стили миксованные */
-@import url(mix.block/center/center.css);
-@import url(mix.block/decor-none/decor-none.css);
-@import url(mix.block/list-style-none/list-style-none.css);
-@import url(mix.block/hover/hover.css);
+@import url(common.block/section/section__title.css);
 
-.content-info {
-   max-width: 1000px;
-   margin: 0 auto;
+.section {
+   max-width: 600px;
 }
-.blockquote {
-   font-size: 1.2rem;
+.section__title {
+   font-size: 1.8rem;
+   color: #df261f;
 }
-.cite {
-   display: block;
+.section__cite {
    text-align: end;
+   display: block;
 }
-.content-source {
-   padding: 1rem;
-   text-align: center;
-}
-.content-source__link {
-   display: inline-block;
+.section__link {
    padding: .5rem;
    color: #333;
+   text-decoration: none;
+
+   display: inline-block;
+   transition: .1s;
 }
-.content-source__link:hover {
-   outline: 2px dashed #df261f;
+.section__link:hover {
+   background-color: #df261f;
+   color: #fff;
 }

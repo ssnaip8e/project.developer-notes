@@ -1,0 +1,13 @@
+.block-list__link {
+   padding: .5rem;
+
+   color: #333;
+   text-decoration: none;
+
+   display: inline-block;
+   transition: .1s;
+}
+.block-list__link:hover {
+   background-color: #df261f;
+   color: #fff;
+}

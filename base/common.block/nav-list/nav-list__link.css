@@ -1,0 +1,15 @@
+.nav-list__link {
+   padding: 1rem;
+
+   color: #df261f;
+   font-size: 2rem;
+   font-weight: 600;
+   text-transform: uppercase;
+   text-decoration: none;
+   
+   transition: .1s;
+}
+.nav-list__link:hover {
+   background-color: #df261f;
+   color: #fff;
+}
