@@ -22,3 +22,6 @@
 @import url(common.block/section/section__cite.css);
 @import url(common.block/section/section__link.css);
 @import url(common.block/section/section--size.css);
+.section__text {
+    width: 300px;
+}
