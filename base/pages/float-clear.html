@@ -36,48 +36,50 @@
           <cite class="section__cite">&mdash;&nbsp;взято с doka-guide.ru</cite>
         </section>
         <section class="section">
-          <pre class="section-code">
-    /* ========================================
-      Синтаксис
-    ======================================== */
+          <pre class="section__pre">
+            <code class="section__code">
+  /* ========================================
+    Синтаксис
+  ======================================== */
 
-      float: left;  
-      float: right;
-      float: none; 
-      float: inherit;
+    float: left;  
+    float: right;
+    float: none; 
+    float: inherit;
 
 
 
 
-    /* ========================================
-      Очистка обтекания
-    =========================================== */
+  /* ========================================
+    Очистка обтекания
+  =========================================== */
 
+    clear: both;
+
+
+
+
+  /* ---------------------------------------
+    Популярные фишки по очистке обтекания
+  ------------------------------------------ */
+
+  [v1]
+    .clearfix::after {
+      display: block;
+      content: " ";
       clear: both;
+    }
 
-
-
-
-    /* ---------------------------------------
-      Популярные фишки по очистке обтекания
-    ------------------------------------------ */
-
-    [v1]
-      .clearfix::after {
-        display: block;
-        content: " ";
-        clear: both;
-      }
-
-    [v2]
-      .clearfix::before,
-      .clearfix::after {
-        display: table;
-        content: " ";
-      }
-      .clearfix::after {
-        clear: both;
-      }
+  [v2]
+    .clearfix::before,
+    .clearfix::after {
+      display: table;
+      content: " ";
+    }
+    .clearfix::after {
+      clear: both;
+    }
+            </code>
           </pre>
         </section>
       </main>
