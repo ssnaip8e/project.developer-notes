@@ -1,26 +1,122 @@
-/* ==============================================
-   Стили прописывались от главной страницы
-   и выполнялнялись по методологии БЭМ 
-=============================================== */
-@import url(common.block/body/body.css);
+/* Шрифт */
+@import url(fonts/stylesheet.css);
+
+/* Директива блоков от главной страницы */
+@import url(common.block/wrapper/wrapper.css);
 @import url(common.block/container/container.css);
 @import url(common.block/nav/nav.css);
 @import url(common.block/nav-list/nav-list.css);
+@import url(common.block/nav-list/nav-list__item.css);
 @import url(common.block/nav-list/nav-list__link.css);
+@import url(common.block/header/header.css);
 @import url(common.block/header/header__title.css);
+@import url(common.block/main/main.css);
+@import url(common.block/flex/flex.css);
 @import url(common.block/content/content.css);
-@import url(common.block/block/block.css);
-@import url(common.block/block/block__title.css);
-@import url(common.block/block-list/block-list.css);
-@import url(common.block/block-list/block-list__link.css);
+@import url(common.block/content-list/content-list.css);
+@import url(common.block/content-list/content-list__item.css);
+@import url(common.block/content-list/content-list__link.css);
+@import url(common.block/footer/footer.css);
 @import url(common.block/copy/copy.css);
-/* =========================
-    Стили других страниц 
-=========================== */
-@import url(common.block/section/section.css);
-@import url(common.block/section/section--size-s.css);
-@import url(common.block/section/section__title.css);
-@import url(common.block/section/section__cite.css);
-@import url(common.block/section/section__link.css);
-@import url(common.block/section/section--size.css);
 
+
+/* Правила вне методологии */
+
+html {
+    height: 100%;
+    background-color: #eee;
+    font-family: Acrom;
+}
+.body {
+    margin: 0;
+    height: 100%;
+}
+/* .wrapper {
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+.nav {
+    height: min(100%, 4rem);
+    background-color: #333;
+}
+.nav-list {
+    display: table;
+    min-height: 4rem;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.nav-list__item {
+    display: table-cell;
+    vertical-align: middle;
+}
+.nav-list__link {
+    color: #eee;
+    display: inline-block;
+    width: 8rem;
+    text-decoration: none;
+    transition: .3s;
+    box-sizing: border-box;
+}
+.nav-list__item:hover {
+    font-size: 1.4rem;
+    color: rgb(80, 133, 225);
+}
+.nav-list__link:hover {
+    font-size: 1.4rem;
+    color: rgb(80, 133, 225);
+}
+.header {
+    background-color: rgb(80, 133, 225);
+}
+.header__title {
+    text-align: center;
+    font-size: 3rem;
+    color: #eee;
+}
+.main {
+    flex: 1;
+}
+.flex {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.content {
+    min-width: 150px;
+}
+.content-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.content-list__link {
+    display: inline-block;
+    padding: .2rem;
+    text-decoration: none;
+    color: rgb(45, 71, 117);
+    transition: .3s;
+}
+.content-list__item:hover {
+    list-style-type: square;
+}
+.content-list__link:hover {
+    font-size: 1.2rem;
+    text-decoration: underline;
+}
+.footer {
+    background-color: #333;
+}
+.copy {
+    font-size: .8rem;
+    color: #eee;
+    text-align: center;
+}
+
+
+ */

@@ -1,15 +1,13 @@
 .nav-list__link {
-   padding: 1rem;
-
-   color: #df261f;
-   font-size: 2rem;
-   font-weight: 600;
-   text-transform: uppercase;
-   text-decoration: none;
-   
-   transition: .1s;
+    color: #eee;
+    display: inline-block;
+    width: 8rem;
+    text-decoration: none;
+    transition: .3s;
+    box-sizing: border-box;
 }
+
 .nav-list__link:hover {
-   background-color: #df261f;
-   color: #fff;
+   font-size: 1.4rem;
+   color: rgb(80, 133, 225);
 }

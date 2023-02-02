@@ -1,0 +1,12 @@
+.content-list__link {
+   display: inline-block;
+   padding: .2rem;
+   text-decoration: none;
+   color: rgb(45, 71, 117);
+   transition: .3s;
+}
+
+.content-list__link:hover {
+   font-size: 1.2rem;
+   text-decoration: underline;
+}
