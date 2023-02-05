@@ -1,5 +1,5 @@
 .content-list__link {
-   display: inline-block;
+   display: block;
    padding: .2rem;
    text-decoration: none;
    color: rgb(45, 71, 117);
@@ -9,4 +9,5 @@
 .content-list__link:hover {
    font-size: 1.2rem;
    text-decoration: underline;
+   font-weight: 600;
 }

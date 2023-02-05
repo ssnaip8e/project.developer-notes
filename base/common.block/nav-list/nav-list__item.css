@@ -2,7 +2,3 @@
     display: table-cell;
     vertical-align: middle;
 }
-
-.nav-list__item:hover {
-    font-size: 1.4rem;
-}

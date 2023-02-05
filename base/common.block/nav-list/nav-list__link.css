@@ -1,6 +1,6 @@
 .nav-list__link {
     color: #eee;
-    display: inline-block;
+    display: block;
     width: 8rem;
     text-decoration: none;
     transition: .3s;

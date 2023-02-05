@@ -9,79 +9,82 @@
 </head>
 <!-- Страница, лист -->
 <body class="body" id="home-page">
-   <!-- Контейнер -->
-   <div class="container">
-      <!-- Навигация -->
-      <nav class="nav">
-         <ul class="nav-list">
-            <li class="nav-list__item"><a class="nav-list__link" href="../index.html#home-page" title="На главную сайта">Project#2</a></li>
-            <li class="nav-list__item"><a class="nav-list__link" href="#" title="К Портфолио">Portfolio</a></li>
-         </ul>
-      </nav>
-      <!-- Шапка -->
-      <header class="header">
-         <h1 class="header__title">Developer note's [Записки разработчика]</h1>
-      </header>
-      <main class="content">
-        <section class="section section--size-s">
+  <div class="wrapper">
+    <nav class="nav">
+      <div class="container">
+        <ul class="nav-list">
+          <li class="nav-list__item"><a href="../index.html" class="nav-list__link">Главная</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Портфолио</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">Developer note's <br>[Записки разработчика]</h1>
+      </div>
+    </header>
+    <main class="main">
+      <div class="container">
+        <section class="section">
           <h2 class="section__title">Float [Обтекание]</h2>
           <p class="section__text">Свойство определяет, по какой стороне будет выравниваться элемент, при этом остальные элементы будут обтекать его с других сторон.</p>
-          <cite class="section__cite">&mdash;&nbsp;взято с hcdev.ru</cite>
           <p class="section__text">Float не предназначен для создания сеток или табличной раскладки! Раньше не было другого способа разбить контент на колонки и поставить их рядом друг с другом. Но сейчас для этого есть флексы и гриды, а float используется только для «обтекания».</p>
-          <p class="section__text">Изменяе элемент на блочную модель. Применяется ко всем элементам (за исключением абсолютно позиционированных).</p>
-          <cite class="section__cite">&mdash;&nbsp;взято с doka-guide.ru</cite>
-          <h2 class="section__title">Clear [Очистка]</h2>
-          <p class="section__text">Для похожей цели появилось значение flow-root для свойства display — оно как бы изолирует обтекание. Достаточно применить его к блоку, внутри которого есть элемент с float — и влияние float не будет распространяться вне этого блока. А относительно соседей он будет вести себя как обычный блочный элемент со статичным позиционированием.</p>
-          <p class="section__text">Для подобной изоляции можно указать блоку свойство overflow: hidden. Отличие состоит в том, что flow-root позволяет использовать свойство overflow: visible.</p>
-          <cite class="section__cite">&mdash;&nbsp;взято с doka-guide.ru</cite>
+          <p class="section__text">Изменяет элемент на блочную модель. Применяется ко всем элементам (за исключением абсолютно позиционированных).</p>
+          <section class="section">
+            <pre class="section__pre">
+              <code class="section__code">
+/* ========================================
+  Плавающий элемент
+======================================== */
+
+  float: left;  
+  float: right;
+  float: none; 
+  float: inherit;
+  
+              </code>
+            </pre>
+          </section>
         </section>
         <section class="section">
-          <pre class="section__pre">
-            <code class="section__code">
-  /* ========================================
-    Синтаксис
-  ======================================== */
+          <h2 class="section__title">Clear [Очистка]</h2>
+          <p class="section__text">Для похожей цели появилось значение flow-root для свойства display — оно как бы изолирует обтекание. Достаточно применить его к блоку, внутри которого есть элемент с float — и влияние float не будет распространяться вне этого блока. А относительно соседей он будет вести себя как обычный блочный элемент со статичным позиционированием.</p>
+          <p class="section__text">Для подобной изоляции можно указать блоку свойство hidden. Отличие состоит в том, что flow-root позволяет использовать свойство overflow: visible.</p>
+          <section class="section">
+            <pre class="section__pre">
+              <code class="section__code">
+/* ========================================
+  Очистка обтекания
+=========================================== */
 
-    float: left;  
-    float: right;
-    float: none; 
-    float: inherit;
+  clear: both;
 
 
+/* ---------------------------------------
+  Популярные фишки по очистке обтекания
+------------------------------------------ */
 
-
-  /* ========================================
-    Очистка обтекания
-  =========================================== */
-
+[v1]
+  .clearfix::after {
+    display: block;
+    content: " ";
     clear: both;
+  }
 
-
-
-
-  /* ---------------------------------------
-    Популярные фишки по очистке обтекания
-  ------------------------------------------ */
-
-  [v1]
-    .clearfix::after {
-      display: block;
-      content: " ";
-      clear: both;
-    }
-
-  [v2]
-    .clearfix::before,
-    .clearfix::after {
-      display: table;
-      content: " ";
-    }
-    .clearfix::after {
-      clear: both;
-    }
-            </code>
-          </pre>
-        </section>
+[v2]
+  .clearfix::before,
+  .clearfix::after {
+    display: table;
+    content: " ";
+  }
+  .clearfix::after {
+    clear: both;
+  }
+                </code>
+              </pre>
+            </section>
+          </section>
+        </div>
       </main>
       <!-- Подвал -->
       <footer class="footer">
