@@ -29,27 +29,220 @@
                <h2 class="section__title">Table [Таблица]</h2>
                <p class="section__text">Таблицы HTML позволяют веб-разработчикам упорядочивать данные в строки и столбцы.</p>
             </section>
+            <div class="flex">
             <section class="section">
                <pre class="section__pre">
                   <code class="section__code">
 /* ===========================
    Структура таблицы
 ============================= */
+
    /* Тэги */
 
-   table &ndash; создание таблицы
-   tr    &ndash; формирование строки таблицы
-   th    &ndash; создание ячейки шапки
-   td    &ndash; создание ячейки
+   table    &ndash; создание таблицы
+   caption  &ndash; заголовок таблицы
+   tr       &ndash; формирование строки таблицы
+   th       &ndash; создание ячейки шапки
+   td       &ndash; создание ячейки
 
+
+
+
+
+
+
+/* ============================
+   Образец таблицы #1
+============================= */
+
+<table border="1">
+   <caption>Таблица 1</caption>
+   <tr>
+      <th>Имя</th>
+      <th>Год</th>
+      <th>Город</th>
+   </tr>
+   <tr>
+      <td>Петр</td>
+      <td>1992</td>
+      <td>Минск</td>
+   </tr>
+   <tr>
+      <td>Василий</td>
+      <td>1991</td>
+      <td>Могилев</td>
+   </tr>
+ </table>
+
+ &lt;table border="1"&gt;
+   &lt;caption&gt;Таблица 1&lt;/caption&gt;
+   &lt;tr&gt;
+      &lt;th&gt;Имя&lt;/th&gt;
+      &lt;th&gt;Год&lt;/th&gt;
+      &lt;th&gt;Город&lt;/th&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;td&gt;Петр&lt;/td&gt;
+      &lt;td&gt;1992&lt;/td&gt;
+      &lt;td&gt;Минск&lt;/td&gt;
+   &lt;/tr&gt;
+   &lt;tr&gt;
+      &lt;td&gt;Василий&lt;/td&gt;
+      &lt;td&gt;1991&lt;/td&gt;
+      &lt;td&gt;Могилев&lt;/td&gt;
+   &lt;/tr&gt;
+&lt;/table&gt;
+
+                  </code>
+               </pre>
+            </section>
+            <section class="section">
+               <pre class="section__pre">
+                  <code class="section__code">
+/* ===========================
+   Структура таблицы
+============================= */
+
+   /* Логические секции */
+
+   thead    &ndash; секция шапки таблицы
+   tbody    &ndash; секция тело таблицы
+   tfoot    &ndash; секция подвала таблицы
 
    /* Атрибуты */
 
-   colspan &ndash; слияние ячеек по горизонтали
-   rowspan &ndash; слияние ячеек по вертикали
+   colspan  &ndash; слияние ячеек по горизонтали
+   rowspan  &ndash; слияние ячеек по вертикали
+   colgroup &ndash; назначает группу столбцов для форматирования
+   col      &ndash; задает свойства столбца в colgroup
 
 
+/* ============================
+   Образец таблицы #2
+============================= */
 
+<table>
+   <colgroup>
+     <col span="2" style="background-color:green">
+     <col style="background-color:red">
+   </colgroup>
+   <thead>
+      <tr>
+         <td>1</td>
+         <td>2</td>
+         <td>3</td>
+      </tr>
+   </thead>
+   <tbody>
+      <tr>
+         <td>A</td>
+         <td>B</td>
+         <td>C</td>
+      </tr>
+      <tr>
+         <td>Четверг</td>
+         <td>Пятница</td>
+         <td>Суббота</td>
+      </tr>
+   </tbody>
+ </table>
+
+ &lt;table&gt;
+   &lt;colgroup&gt;
+      &lt;col span="2" style="background-color:green"&gt;
+      &lt;col style="background-color:red"&gt;
+   &lt;/colgroup&gt;
+   &lt;thead&gt;
+      &lt;tr&gt;
+         &lt;td&gt;1&lt;/td&gt;
+         &lt;td&gt;2&lt;/td&gt;
+         &lt;td&gt;3&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/thead&gt;
+   &lt;tbody&gt;
+      &lt;tr&gt;
+         &lt;td&gt;A&lt;/td&gt;
+         &lt;td&gt;B&lt;/td&gt;
+         &lt;td&gt;C&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+         &lt;td&gt;Четверг&lt;/td&gt;
+         &lt;td&gt;Пятница&lt;/td&gt;
+         &lt;td&gt;Суббота&lt;/td&gt;
+      &lt;/tr&gt;
+   &lt;/tbody&gt;
+ &lt;/table&gt;
+
+                     </code>
+                  </pre>
+               </section>
+            </div>
+            <section class="section">
+               <pre class="section__pre">
+                  <code class="section__code">
+/* ========================
+   Дизайнерский приём 
+=========================*/
+/* -------------------------------------------------------------------------------
+   Подсветка строк таблицы через одну. 
+   Это помогает считывать длинные таблицы, глазу есть за что зацепиться.
+   Например, сделаем каждую вторую строку с коричневым фоном. 
+   Для этого понадобится всего одно CSS-правило с псевдоклассом [:nth-child()]
+-------------------------------------------------------------------------------- */
+
+   tbody tr:nth-child(odd) {
+      background-color: #663613;
+   }
+
+/* --------------------------------------------------------------------
+   Можно сделать так, чтобы строка с заголовками колонок прилипала 
+   при прокрутке длинной таблицы. 
+   Это удобно, если данных много и пользователь может просто забыть, 
+   в какой колонке какие данные.
+-------------------------------------------------------------------- */
+
+   th {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+   }                     
+
+/* --------------------------------------------------------------------
+   Не забудьте добавить position: relative для родителя. 
+   Заодно подстрахуемся и сделаем прилипающими только заголовки 
+   в шапке таблицы.
+-------------------------------------------------------------------- */
+   table {
+      position: relative;
+   }
+   
+   thead th {
+      position: sticky;
+      position: -webkit-sticky;
+      top: 0;
+      z-index: 1;
+   }
+
+/* --------------------------------------------------------------------
+   Задайте фон заголовкам, чтобы текст ячеек не был виден при прокрутке. 
+   А чтобы избавиться от линий между ячейками, зададим для всей таблицы 
+   свойство [border-collapse: collapse]
+-------------------------------------------------------------------- */
+
+   table {
+      position: relative;
+      border-collapse: collapse;
+   }
+   
+   thead th {
+      position: -webkit-sticky;
+      position: sticky;
+      top: 0;
+      z-index: 1;
+      background-color: #FF8630;
+   }
+   
                   </code>
                </pre>
             </section>
