@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Developer Note's</title>
+   <link rel="stylesheet" href="../index.css">
+</head>
+<!-- Страница, лист -->
+<body class="body" id="home-page">
+  <div class="wrapper">
+    <nav class="nav">
+      <div class="container">
+        <ul class="nav-list">
+          <li class="nav-list__item"><a href="../index.html" class="nav-list__link">Главная</a></li>
+          <li class="nav-list__item"><a href="#" class="nav-list__link">Портфолио</a></li>
+        </ul>
+      </div>
+    </nav>
+    <header class="header">
+      <div class="container">
+        <h1 class="header__title">Developer note's <br>[Записки разработчика]</h1>
+      </div>
+    </header>
+    <main class="main">
+        <div class="container">
+          <section class="section">
+            <h2 class="section__title">Audio/Video [Аудио/Видео]</h2>
+            <p class="section__text">Добавление медиа-контента. В форматах видео- и аудио-файлов. </p>
+          </section>
+          <section class="section">
+            <pre class="section__pre">
+              <code class="section__code">
+  /* ====================
+         Структура 
+  ====================== */
+
+  /* теги */
+
+  audio &ndash; создание аудио
+  video &ndash; создание видео
+
+  /* атрибуты */
+
+  src      &ndash; задает ссылку на аудио/видео-файл (ресурс)
+  controls &ndash; выводит элементы для управления ролика/трека (панель управления)
+
+    &lt;audio src= "media/the_beatles_help.mpЗ" 
+    controls&gt;&lt;/audio&gt;
+
+  autoplay &ndash; запускает воспроизведение сразу после открытия страницы
+  loop     &ndash; задает цикл воспроизведения (количество проигрываний)
+  muted    &ndash; предписывает изначально приглушение звука
+  poster   &ndash; задает ссылку на файл с постером - графическим изображением
+
+    &lt;video src="media/the_beatles_yesterday.mp4"
+    poster="images/the_beatles.png"&gt;&lt;/video&gt;
+
+  height   &ndash; задает высоту ролика/трека в выведенного на страницу
+  width    &ndash; задает ширину ролика/трека в выведенного на страницу
+  preload  &ndash; управляет предварительной загрузкой ролика/трека:
+    [none] - значение не загружать ролик/трек после 
+        загрузки страницы, 
+        однако в этом случае в панели воспроизведения 
+        изначально вообще ничего не будет выведено
+
+        &lt;video src="media/the_beatles_yesterday.mp4" 
+        preload="none"&gt;&lt;/video&gt;
+
+    [metadata] - значение загружать ролик/трек, 
+        в котором хранятся его геометрические размеры, 
+        продолжительность и первый кадр, 
+        который будет выведен в панели воспроизведения 
+        (поведение по умолчанию)
+        
+    [auto] - значение загрузить весь ролик, указывать 
+        это значение имеет смысл только коротким роликам - 
+        иначе загрузка затянется надолго
+
+/* -------------------------------------------------------------------------
+   Если указан атрибут [autoplay], значение атрибута [preload] игнорируется
+   
+   Для размещения на веб-страницах следует использовать видеоролики 
+   со следующими параметрами: 
+      - МР4;
+      - MPEG-4 AVC (также известен как AVC и Н.264);
+      - МРЗ.
+--------------------------------------------------------------------------- */   
+
+            </code>
+          </pre>
+        </section>
+      </div>
+    </main>
+    <footer class="footer">
+      <p class="copy">&copy;&nbsp;2022-2023&nbsp;Все мои работы защищены моим трудолюбием.</p>  
+    </footer>
+  </div>
+</body>
+</html>
