@@ -4,80 +4,71 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Developer Note's</title>
-   <link rel="stylesheet" href="../index.css">
+   <title>column-count</title>
+   <style>
+      body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         font-size: 18px;
+         line-height: 1.4;
+         color: #222;
+      }
+      .container {
+         max-width: 800px;
+         margin: 0 auto;
+      }
+      .codebox {
+         background-color: #222;
+         color: #ffd700;
+         margin-bottom: 3rem;
+      }
+   </style>
 </head>
 <!-- Страница, лист -->
-<body class="body" id="home-page">
-   <div class="wrapper">
-      <nav class="nav">
-         <div class="container">
-            <ul class="nav-list">
-               <li class="nav-list__item"><a href="../index.html" class="nav-list__link">Главная</a></li>
-               <li class="nav-list__item"><a href="#" class="nav-list__link">Портфолио</a></li>
-            </ul>
-         </div>
-      </nav>
-      <header class="header">
-         <div class="container">
-            <h1 class="header__title">Developer note's <br>[Записки разработчика]</h1>
-         </div>
-      </header>
-      <main class="content">
-         <div class="container">
-            <section class="section">
-               <h2 class="section__title">Column-count [Многоколочность]</h2>
-               <p class="section__text">Свойство column-count управляет количеством колонок, на которые будет разбит контент элемента.</p>
-            </section>
-            <section class="section">
-               <pre class="section__pre">
-                  <code class="section__code">
-/* ==============================================
-   Синтаксис
-=================================================*/
-
-   column-count: n;
-   column-width: px/%/em/rem;
-   column-gap: px/em/rem;
-
-
-/* -------------------------------------------------------
-   Можно указать одно целое положительное число, 
-   означающее количество колонок.
-   Вместо числа допустимо ключевое слово [auto]. 
-   Тогда количество колонок будет зависеть от ширины, 
-   указанной в свойстве [column-width].
------------------------------------------------------------ */
-
-   p {
-      column-count: 3;
-   }
-
-   p {
-      column-count: auto;
-      column-width: 250px;
-      }
-
-/* ---------------------------------------------------------------
-   Если одновременно задать [column-width] и [column-count],
-   браузер будет отображать столько колонок, сколько влезет
-   в ширину родительского блока. В примере ниже мы можем 
-   при помощи слайдера управлять размером блока.
-   Граница поможет нам визуализировать его размеры.
------------------------------------------------------------------- */
-
-   .text-wrapper {
-      column-count: 4;
-      column-width: 250px;
-   }
-                  </code>
-               </pre>
-            </section>
-         </div>
-      </main>
-      <footer class="footer">
-         <p class="copy center">&copy;&nbsp;2022-2023&nbsp;Все мои работы защищены моим трудолюбием.</p>        
-      </footer>
+<body>
+   <div class="container">
+      <h1>Column-count [Многоколочность]</h1>
+      <p>
+         Свойство <b>column-count</b> управляет количеством колонок, на которые будет разбит контент элемента.
+      </p>
+      <div class="codebox">
+         <pre>
+            <code>
+               column-count: n;
+               column-width: px/%/em/rem;
+               column-gap: px/em/rem;
+            </code>
+         </pre>
+      </div>
+      <p>
+         Можно указать одно целое положительное число, означающее количество колонок. Вместо числа допустимо ключевое слово <b>auto</b>.Тогда количество колонок будет зависеть от ширины, указанной в свойстве <b>column-width</b>.
+      </p>
+      <div class="codebox">
+         <pre>
+            <code>
+               p {
+                  column-count: 3;
+               }
+            
+               p {
+                  column-count: auto;
+                  column-width: 250px;
+               }
+            </code>
+         </pre>
+      </div>
+      <p>
+         Если одновременно задать <b>column-width</b> и <b>column-count</b> браузер будет отображать столько колонок, сколько влезет в ширину родительского блока. В примере ниже мы можем при помощи слайдера управлять размером блока. Граница поможет нам визуализировать его размеры.
+      </p>
+      <div class="codebox">
+         <pre>
+            <code>
+               .text-wrapper {
+                  column-count: 4;
+                  column-width: 250px;
+               }
+            </code>
+         </pre>
+      </div>
    </div>
 </body>
 </html>

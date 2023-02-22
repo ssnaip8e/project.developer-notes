@@ -1,101 +1,58 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Developer Note's</title>
-   <link rel="stylesheet" href="index.css">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Developer Note's</title>
+<link rel="stylesheet" href="./fonts/comfortaa.css">
+<link rel="stylesheet" href="./normalize.css">
+<link rel="stylesheet" href="./main.css">
 </head>
 <!-- Страница, лист 💡 -->
-<body class="body" id="home-page">
-   <!-- Обертка для прижатия подвала к низу -->
-   <div class="wrapper">
-      <!-- Блок навигации -->
-      <nav class="nav">
-         <!-- Контейнер -->
-         <div class="container">
-            <!-- Мини-меню навигации -->
-            <ul class="nav-list">
-               <!-- Пункт + Ссылка -->
-               <li class="nav-list__item"><a href="#" class="nav-list__link">Главная</a></li>
-               <li class="nav-list__item"><a href="#" class="nav-list__link">Портфолио</a></li>
-            </ul>
-         </div>
-      </nav>
-      <!-- Блок шапки -->
-      <header class="header">
-         <div class="container">
-            <!-- Заголовок 1ур. -->
-            <h1 class="header__title">Developer note's <br>[Записки разработчика]</h1>
-         </div>
-      </header>
-      <!-- Блок содержимого -->
-      <main class="main">
-         <div class="container">
-            <!-- Обертка списков ссылок на страницы -->
-            <div class="flex">
-               <!-- Блок списка -->
-               <div class="content">
-                  <!-- Заголовок списка -->
-                  <h2 class="content__title">HTML</h2>
-                  <!-- Список -->
-                  <ul class="content-list">
-                     <!-- Пункт + Ссылка -->
-                     <li class="content-list__item"><a class="content-list__link" href="./pages/table.html" target="_blank">&lt;table&gt;</a></li>
-                     <li class="content-list__item"><a class="content-list__link" href="./pages/audio-video.html" target="_blank">&lt;audio/video&gt;</a></li>
-                     <li class="content-list__item"><a class="content-list__link" href="./pages/area-map.html" target="_blank">&lt;area/map&gt;</a></li>
-                     <li class="content-list__item"><a class="content-list__link" href="./pages/form.html" target="_blank">&lt;form&gt;</a></li>
-                  <!-- <li class="block-list__item"><a class="block-list__link" href="#" title="Холст" target="_blank">&lt;canvas&gt;</a></li> -->
-                  <!-- <li class="block-list__item"><a class="block-list__link" href="#" title="Вектор" target="_blank">&lt;svg&gt;</a></li> -->
-                  <!-- <li class="block-list__item"><a class="block-list__link" href="#" title="Фреймы" target="_blank">&lt;frame/iframe&gt;</a></li> -->
-                  <!-- <li class="block-list__item"><a class="block-list__link" href="#" title="Пользовательсике атрибуты" target="_blank">&lt;data-*&gt;</a></li> -->
-                  </ul>
-               </div>
-               <div class="content">
-                  <h2 class="content__title">CSS</h2>
-                  <ul class="content-list">
-                     <li class="content-list__item"><a class="content-list__link" href="./pages/reset.html" target="_blank">Reset</a></li>
-                     <li class="content-list__item"><a class="content-list__link" href="./pages/normalize.html" target="_blank">Normalize</a></li>
-                     <li class="content-list__item"><a class="content-list__link" href="./pages/float-clear.html" target="_blank">Float/Clear</a></li>
-                     <li class="content-list__item"><a class="content-list__link" href="./pages/column-count.html" target="_blank">Column-count</a></li>
-                     <!-- <li class="block-list__item"><a class="block-list__link" href="p" title="Гибкость" target="_blank">Flex</a></li> -->
-                  <!-- <li class="block-list__item"><a class="block-list__link" href="#" title="Сетка" target="_blank">Grid</a></li> -->
-                  <!-- <li class="block-list__item"><a class="block-list__link" href="#" title="Переменные" target="_blank">Variable</a></li> -->
-                  <!-- <li class="block-list__item"><a class="block-list__link" href="#" title="Фильтры" target="_blank">Filters</a></li> -->
-                  <!-- <li class="block-list__item"><a class="block-list__link" href="#" title="Анимация" target="_blank">Keyframes</a></li> -->
-                  <!-- <li class="block-list__item"><a class="block-list__link" href="#" title="Трансформы" target="_blank">Transform</a></li> -->
-                  <!-- <li class="block-list__item"><a class="block-list__link" href="#" title="Директивы" target="_blank">@-директивы</a></li> -->
-                  <!-- <li class="block-list__item"><a class="block-list__link" href="#" title="???" target="_blank">Aria</a></li> -->
-                  </ul>
-               </div>
-               <!--
-               <div class="content">
-                  <h2 class="content__title">Others</h2>
-                  <ul class="content-list">
-                     <li class="content-list__item"><a class="content-list__link" href="pages/table.html" target="_blank">&lt;table&gt;</a></li>
-                     <li class="block-list__item"><a class="block-list__link" href="#" target="_blank">Значения</a></li>
-                  <li class="block-list__item"><a class="block-list__link" href="#" target="_blank">Виды верстки</a></li>
-                  <li class="block-list__item"><a class="block-list__link" href="#" target="_blank">Виды адаптива</a></li>
-                  <li class="block-list__item"><a class="block-list__link" href="#" target="_blank">Имена блоков и элементов</a></li>
-                  <li class="block-list__item"><a class="block-list__link" href="#" title="Методология БЛОК__Элемент_Модификатор"  target="_blank">БЭМ</a></li>
-                  <li class="block-list__item"><a class="block-list__link" href="#" title="Мини-словарик по Англ-Рус" target="_blank">Перевод слов</a></li>
-                  <li class="block-list__item"><a class="block-list__link" href="#" title="Контроль версий" target="_blank">Git & Bash</a></li>
-                  <li class="block-list__item"><a class="block-list__link" href="#" title="Фреймворк" target="_blank">Framework</a></li>
-                  <li class="block-list__item"><a class="block-list__link" href="#" title="Препроцессор HTML" target="_blank">Pug</a></li>
-                  <li class="block-list__item"><a class="block-list__link" href="#" title="Препроцессор CSS" target="_blank">Sass</a></li>
-                  <li class="block-list__item"><a class="block-list__link" href="#" title="Препроцессор CSS" target="_blank">Less</a></li>
-                  <li class="block-list__item"><a class="block-list__link" href="#" title="Препроцессор CSS" target="_blank">Stylus</a></li>
-                  </ul>
-               </div> -->
+<body>
+    <header class="header">
+        <div class="container">
+            <a href="#" class="logo"><h1>Developer Note's</h1></a>
+            <a href="#" class="portfolio">portfolio</a>
+        </div>
+    </header>
+    <div class="container flex">
+        <nav class="nav">
+            <div class="accordion"> 
+                <input type="radio" name="accordion" 
+                id="action1"> 
+                <label for="action1">flex</label> 
+                <div class="list">
+                    <a href="" class="link">basis</a>
+                    <a href="./pages/column-count.html" target="iframe" class="link" >basis</a>
+                </div>
+            </div> 
+            <div class="accordion"> 
+                <input type="radio" name="accordion" 
+                id="action2"> 
+                <label for="action2">grid</label> 
+                <div class="list">
+                    <a href="./pages/flex.html" target="iframe" class="link" >basis</a>
+                </div>
             </div>
-         </div>
-      </main>
-      <!-- Подвал -->
-      <footer class="footer">
-         <!-- Копирайт -->
-         <p class="copy">&copy;&nbsp;2022-2023&nbsp;Все мои работы защищены моим трудолюбием.</p>  
-      </footer>
-   </div>
+            <div class="accordion"> 
+                <input type="radio" name="accordion" 
+                id="action99"> 
+                <label for="action99">others</label> 
+                <div class="list">
+                    <a href="./pages/column-count.html" target="iframe" class="link" >column-count</a>
+                </div>
+            </div> 
+        </nav>
+        <main class="main">
+            <iframe class="iframe" src="./pages/home.html" name="iframe"></iframe>
+        </main>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; Все работы защищены моим трудолюбием</p>
+        </div>
+    </footer>
 </body>
 </html>
