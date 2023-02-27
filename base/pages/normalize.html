@@ -4,46 +4,64 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Developer Note's</title>
-   <link rel="stylesheet" href="../index.css">
+   <title>normalize</title>
+   <style>
+      body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         font-size: 18px;
+         line-height: 1.4;
+         color: #222;
+      }
+      .container {
+         max-width: 800px;
+         margin: 0 auto;
+      }
+      .codebox {
+         background-color: #222;
+         color: #ffd700;
+         margin-bottom: 3rem;
+      }
+      p > a {
+         display: inline-block;
+         padding: 0.5rem 1rem;
+         border: 4px solid #222;
+         text-decoration: none;
+         font-weight: 600;
+         transition: .2s;
+         color: #222;
+      }
+      p > a:hover {
+         background-color: #ffd700;
+      }
+   </style>
 </head>
 <!-- Страница, лист -->
-<body class="body" id="home-page">
-   <div class="wrapper">
-      <nav class="nav">
-         <div class="container">
-         <ul class="nav-list">
-            <li class="nav-list__item"><a href="../index.html" class="nav-list__link">Главная</a></li>
-            <li class="nav-list__item"><a href="#" class="nav-list__link">Портфолио</a></li>
-         </ul>
-         </div>
-      </nav>
-      <header class="header">
-         <div class="container">
-         <h1 class="header__title">Developer note's <br>[Записки разработчика]</h1>
-         </div>
-      </header>
-      <main class="main">
-         <div class="container">
-            <section class="section">
-               <h2 class="section__title">Normalize [Кроссбраузерность]</h2>
-               <p class="section__text">Normalize.css — это небольшой CSS-файл, который обеспечивает для HTML-элементов лучшую кроссбраузерность в стилях по умолчанию. Это современная, готовая к HTML5 альтернатива традиционному</p>
-               <p class="section__text">Normalize.css исправляет популярные ошибки.
-               Он исправляет основные баги на мобильных и десктопных устройствах, которые не затрагивает reset.css. Это включает в себя параметры отображения элементов HTML5, исправление font-size для предварительно отформатированного текста, отображение SVG в IE9, и многие другие баги, связанные с отображаемым в разных браузерах и операционных системах.</p>
-               <p class="section__text">Normalize.css     сохраняет полезные настройки по умолчанию Reset.css накладывает   однородный визуальный стиль, выравнивая стили по умолчанию почти для  всех элементов. В отличие от этого, normalize.css сохраняет многие полезные стили браузеров по умолчанию. Это значит, что не требуется повторно объявлять стили для всех стандартных элементов типографики.</p>
-               <p class="section__text">Когда элемент имеет различные стили по умолчанию в разных браузерах, normalize.css там, где это возможно, стремится сделать эти стили совместимыми и соответствующими современными стандартам.</p>
-               <p class="section__text">Normalize.css модульный
-               Проект разбит на относительно независимые участки, что позволяет увидеть, каким именно элементам нужны конкретные стили. Кроме того, это даёт вам возможность удалить блоки свойств (например, нормализацию форм), если известно, что они никогда не понадобятся на сайте.</p>
-               <div class="section-box">
-               <a class="section-box__link" href="https://necolas.github.io/normalize.css/" target="_blank">На ресурс</a>
-               </div>
-            </section>
-            <section class="section">
-               <pre class="section__pre">
-               <code class="section__code">
-/* =========================================================================
-   ! normalize.css v8.0.1 | MIT License | github.com/necolas/normalize.css 
-=========================================================================== */
+<body>
+   <div class="container">
+      <h1>Normalize [Кроссбраузерность]</h1>
+      <p>
+         <b>Normalize.css</b> — это небольшой CSS-файл, который обеспечивает для HTML-элементов лучшую кроссбраузерность в стилях по умолчанию. Это современная, готовая к HTML5 альтернатива традиционному
+      </p>
+      <p>
+         <b>Normalize.css</b> исправляет популярные ошибки.
+         Он исправляет основные баги на мобильных и десктопных устройствах, которые не затрагивает <b>reset.css</b>. Это включает в себя параметры отображения элементов HTML5, исправление <b>font-size</b> для предварительно отформатированного текста, отображение SVG в IE9, и многие другие баги, связанные с отображаемым в разных браузерах и операционных системах.
+      </p>
+      <p>
+         <b>Normalize.css</b> сохраняет полезные настройки по умолчанию Reset.css накладывает однородный визуальный стиль, выравнивая стили по умолчанию почти для  всех элементов. В отличие от этого, <b>normalize.css</b> сохраняет многие полезные стили браузеров по умолчанию. Это значит, что не требуется повторно объявлять стили для всех стандартных элементов типографики.
+      </p>
+      <p>
+         Когда элемент имеет различные стили по умолчанию в разных браузерах, <b>normalize.css</b> там, где это возможно, стремится сделать эти стили совместимыми и соответствующими современными стандартам.
+      </p>
+      <p>
+         <b>Normalize.css</b> - модульный. <br>
+         Проект разбит на относительно независимые участки, что позволяет увидеть, каким именно элементам нужны конкретные стили. Кроме того, это даёт вам возможность удалить блоки свойств (например, нормализацию форм), если известно, что они никогда не понадобятся на сайте.
+      </p>
+      <p>
+         <a class="section-box__link" href="https://necolas.github.io/normalize.css/" target="_blank">На ресурс</a>
+      </p>
+      <div class="codebox">
+         <pre>
+            <code>
    /* -----------
       Document 
    ------------ */
@@ -333,14 +351,9 @@
    [hidden] {
       display: none;
    }
-               </code>
-            </pre>
-         </section>
-         </div>
-      </main>
-      <footer class="footer">
-         <p class="copy">&copy;&nbsp;2022-2023&nbsp;Все мои работы защищены моим трудолюбием.</p>  
-      </footer>
-  </div>
+            </code>
+         </pre>
+      </div>
+   </div>
 </body>
 </html>

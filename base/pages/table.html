@@ -4,263 +4,153 @@
    <meta charset="UTF-8">
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Developer Note's</title>
-   <link rel="stylesheet" href="../index.css">
+   <title>table</title>
+   <style>
+      body {
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+         font-size: 18px;
+         line-height: 1.4;
+         color: #222;
+      }
+      .container {
+         max-width: 800px;
+         margin: 0 auto;
+      }
+      .codebox {
+         background-color: #222;
+         color: #ffd700;
+         margin-bottom: 3rem;
+      }
+      p > a {
+         display: inline-block;
+         padding: 0.5rem 1rem;
+         border: 4px solid #222;
+         text-decoration: none;
+         font-weight: 600;
+         transition: .2s;
+         color: #222;
+      }
+      p > a:hover {
+         background-color: #ffd700;
+      }
+   </style>
 </head>
 <!-- Страница, лист -->
-<body class="body" id="home-page">
-   <div class="wrapper">
-     <nav class="nav">
-       <div class="container">
-         <ul class="nav-list">
-           <li class="nav-list__item"><a href="../index.html" class="nav-list__link">Главная</a></li>
-           <li class="nav-list__item"><a href="#" class="nav-list__link">Портфолио</a></li>
-         </ul>
-       </div>
-     </nav>
-     <header class="header">
-       <div class="container">
-         <h1 class="header__title">Developer note's <br>[Записки разработчика]</h1>
-       </div>
-     </header>
-      <main class="main">
-         <div class="container">
-            <section class="section">
-               <h2 class="section__title">Table [Таблица]</h2>
-               <p class="section__text">Таблицы HTML позволяют веб-разработчикам упорядочивать данные в строки и столбцы.</p>
-               <p class="section__text">Задать границы элементам [tr], [thead], [tfoot] и [tbody] нельзя, поэтому задавайте их тегам [table], [th] или [td].</p>
-               <p class="section__title">Ширина таблицы по умолчанию подстраивается под контент внутри, 
-               если не задавать дополнительные CSS-свойства. 
-               Это приводит к определённым сложностям на адаптивных сайтах. 
-               Если контент не помещается на маленький экран, 
-               то таблица не сжимается, у неё появляется горизонтальный скролл. 
-               У этой проблемы есть несколько потенциальных решений: скрывать не первостепенную 
-               информацию для пользователей
-               мобильных устройств или перестраивать отображение таблицы,
-               например, при помощи свойства [display].</p>
-            </section>
-            <div class="flex">
-            <section class="section">
-               <pre class="section__pre">
-                  <code class="section__code">
-/* ===========================
-   Структура таблицы
-============================= */
+<body>
+   <div class="container">
+      <h1>Table [Таблица]</h1>
+      <p>
+         Таблицы HTML позволяют веб-разработчикам упорядочивать данные в строки и столбцы.
+      </p>
+      <p>
+         Ширина таблицы по умолчанию подстраивается под контент внутри, 
+         если не задавать дополнительные CSS-свойства. 
+         Это приводит к определённым сложностям на адаптивных сайтах. 
+         Если контент не помещается на маленький экран, 
+         то таблица не сжимается, у неё появляется горизонтальный скролл. 
+         У этой проблемы есть несколько потенциальных решений: скрывать не первостепенную 
+         информацию для пользователей
+         мобильных устройств или перестраивать отображение таблицы,
+         например, при помощи свойства <b>display</b>.
+      </p>
+      <p>
+         Задать границы элементам <b>tr</b>, <b>thead</b>, <b>tfoot</b> и <b>tbody</b> нельзя, поэтому задавайте их тегам <b>table</b>, <b>th</b>> или <b>td</b>.
+      </p>
+      <div class="codebox">
+         <pre>
+            <code>
+         /* Теги */
+            table    &ndash; создание таблицы
+            caption  &ndash; заголовок таблицы
+            tr       &ndash; формирование строки таблицы
+            th       &ndash; создание ячейки шапки
+            td       &ndash; создание ячейки
 
-   /* Тэги */
+         /* Логические секции */
 
-   table    &ndash; создание таблицы
-   caption  &ndash; заголовок таблицы
-   tr       &ndash; формирование строки таблицы
-   th       &ndash; создание ячейки шапки
-   td       &ndash; создание ячейки
-
-
-
-
-
-
-
-/* ============================
-   Образец таблицы #1
-============================= */
-
-<table border="1">
-   <caption>Таблица 1</caption>
-   <tr>
-      <th>Имя</th>
-      <th>Год</th>
-      <th>Город</th>
-   </tr>
-   <tr>
-      <td>Петр</td>
-      <td>1992</td>
-      <td>Минск</td>
-   </tr>
-   <tr>
-      <td>Василий</td>
-      <td>1991</td>
-      <td>Могилев</td>
-   </tr>
- </table>
-
- &lt;table border="1"&gt;
-   &lt;caption&gt;Таблица 1&lt;/caption&gt;
-   &lt;tr&gt;
-      &lt;th&gt;Имя&lt;/th&gt;
-      &lt;th&gt;Год&lt;/th&gt;
-      &lt;th&gt;Город&lt;/th&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-      &lt;td&gt;Петр&lt;/td&gt;
-      &lt;td&gt;1992&lt;/td&gt;
-      &lt;td&gt;Минск&lt;/td&gt;
-   &lt;/tr&gt;
-   &lt;tr&gt;
-      &lt;td&gt;Василий&lt;/td&gt;
-      &lt;td&gt;1991&lt;/td&gt;
-      &lt;td&gt;Могилев&lt;/td&gt;
-   &lt;/tr&gt;
-&lt;/table&gt;
-
-                  </code>
-               </pre>
-            </section>
-            <section class="section">
-               <pre class="section__pre">
-                  <code class="section__code">
-/* ===========================
-   Структура таблицы
-============================= */
-
-   /* Логические секции */
-
-   thead    &ndash; секция шапки таблицы
-   tbody    &ndash; секция тело таблицы
-   tfoot    &ndash; секция подвала таблицы
-
-   /* Атрибуты */
-
-   colspan  &ndash; слияние ячеек по горизонтали
-   rowspan  &ndash; слияние ячеек по вертикали
-   colgroup &ndash; назначает группу столбцов для форматирования
-   col      &ndash; задает свойства столбца в colgroup
-
-
-/* ============================
-   Образец таблицы #2
-============================= */
-
-<table>
-   <colgroup>
-     <col span="2" style="background-color:green">
-     <col style="background-color:red">
-   </colgroup>
-   <thead>
-      <tr>
-         <td>1</td>
-         <td>2</td>
-         <td>3</td>
-      </tr>
-   </thead>
-   <tbody>
-      <tr>
-         <td>A</td>
-         <td>B</td>
-         <td>C</td>
-      </tr>
-      <tr>
-         <td>Четверг</td>
-         <td>Пятница</td>
-         <td>Суббота</td>
-      </tr>
-   </tbody>
- </table>
-
- &lt;table&gt;
-   &lt;colgroup&gt;
-      &lt;col span="2" style="background-color:green"&gt;
-      &lt;col style="background-color:red"&gt;
-   &lt;/colgroup&gt;
-   &lt;thead&gt;
-      &lt;tr&gt;
-         &lt;td&gt;1&lt;/td&gt;
-         &lt;td&gt;2&lt;/td&gt;
-         &lt;td&gt;3&lt;/td&gt;
-      &lt;/tr&gt;
-   &lt;/thead&gt;
-   &lt;tbody&gt;
-      &lt;tr&gt;
-         &lt;td&gt;A&lt;/td&gt;
-         &lt;td&gt;B&lt;/td&gt;
-         &lt;td&gt;C&lt;/td&gt;
-      &lt;/tr&gt;
-      &lt;tr&gt;
-         &lt;td&gt;Четверг&lt;/td&gt;
-         &lt;td&gt;Пятница&lt;/td&gt;
-         &lt;td&gt;Суббота&lt;/td&gt;
-      &lt;/tr&gt;
-   &lt;/tbody&gt;
- &lt;/table&gt;
-
-                     </code>
-                  </pre>
-               </section>
-            </div>
-            <section class="section">
-               <pre class="section__pre">
-                  <code class="section__code">
-/* ========================
-   Дизайнерский приём 
-=========================*/
-/* -------------------------------------------------------------------------------
-   Подсветка строк таблицы через одну. 
-   Это помогает считывать длинные таблицы, глазу есть за что зацепиться.
-   Например, сделаем каждую вторую строку с коричневым фоном. 
-   Для этого понадобится всего одно CSS-правило с псевдоклассом [:nth-child()]
--------------------------------------------------------------------------------- */
-
-   tbody tr:nth-child(odd) {
-      background-color: #663613;
-   }
-
-/* --------------------------------------------------------------------
-   Можно сделать так, чтобы строка с заголовками колонок прилипала 
-   при прокрутке длинной таблицы. 
-   Это удобно, если данных много и пользователь может просто забыть, 
-   в какой колонке какие данные.
--------------------------------------------------------------------- */
-
-   th {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-      z-index: 1;
-   }                     
-
-/* --------------------------------------------------------------------
-   Не забудьте добавить position: relative для родителя. 
-   Заодно подстрахуемся и сделаем прилипающими только заголовки 
-   в шапке таблицы.
--------------------------------------------------------------------- */
-   table {
-      position: relative;
-   }
-   
-   thead th {
-      position: sticky;
-      position: -webkit-sticky;
-      top: 0;
-      z-index: 1;
-   }
-
-/* --------------------------------------------------------------------
-   Задайте фон заголовкам, чтобы текст ячеек не был виден при прокрутке. 
-   А чтобы избавиться от линий между ячейками, зададим для всей таблицы 
-   свойство [border-collapse: collapse]
--------------------------------------------------------------------- */
-
-   table {
-      position: relative;
-      border-collapse: collapse;
-   }
-   
-   thead th {
-      position: -webkit-sticky;
-      position: sticky;
-      top: 0;
-      z-index: 1;
-      background-color: #FF8630;
-   }
-   
-                  </code>
-               </pre>
-            </section>
-         </div>
-      </main>
-      <footer class="footer">
-         <p class="copy center">&copy;&nbsp;2022-2023&nbsp;Все мои работы защищены моим трудолюбием.</p>        
-      </footer>
+            thead    &ndash; секция шапки таблицы
+            tbody    &ndash; секция тело таблицы
+            tfoot    &ndash; секция подвала таблицы
+         
+         /* Атрибуты */
+         
+            colspan  &ndash; слияние ячеек по горизонтали
+            rowspan  &ndash; слияние ячеек по вертикали
+            colgroup &ndash; назначает группу столбцов для форматирования
+            col      &ndash; задает свойства столбца в colgroup
+            </code>
+         </pre>
+      </div>
+      <p>
+         Подсветка строк таблицы через одну. 
+         Это помогает считывать длинные таблицы, глазу есть за что зацепиться.
+         Например, сделаем каждую вторую строку с коричневым фоном. 
+         Для этого понадобится всего одно CSS-правило с псевдоклассом <b>:nth-child()</b>.
+      </p>
+      <div class="codebox">
+         <pre>
+            <code>
+               tbody tr:nth-child(odd) {
+                  background-color: #663613;
+               }
+            </code>
+         </pre>
+      </div>
+      <p>
+         Можно сделать так, чтобы строка с заголовками колонок прилипала 
+         при прокрутке длинной таблицы. 
+         Это удобно, если данных много и пользователь может просто забыть, 
+         в какой колонке какие данные.
+      </p>
+      <div class="codebox">
+         <pre>
+            <code>
+            th {
+               position: -webkit-sticky;
+               position: sticky;
+               top: 0;
+               z-index: 1;
+            }   
+            </code>
+         </pre>
+      </div>
+      <p>
+         Не забудьте добавить position: relative для родителя. 
+         Заодно подстрахуемся и сделаем прилипающими только заголовки 
+         в шапке таблицы.
+      </p>
+      <div class="codebox">
+         <pre>
+            <code>
+               table {
+                  position: relative;
+               }
+            </code>
+         </pre>
+      </div>
+      <p>
+         Задайте фон заголовкам, чтобы текст ячеек не был виден при прокрутке. 
+         А чтобы избавиться от линий между ячейками, зададим для всей таблицы 
+         свойство <b>border-collapse: collapse</b>.
+      </p>
+      <div class="codebox">
+         <pre>
+            <code>
+               table {
+                  position: relative;
+                  border-collapse: collapse;
+               }
+               
+               thead th {
+                  position: -webkit-sticky;
+                  position: sticky;
+                  top: 0;
+                  z-index: 1;
+                  background-color: #FF8630;
+               }
+            </code>
+         </pre>
+      </div>
    </div>
 </body>
 </html>

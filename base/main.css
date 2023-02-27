@@ -1,7 +1,9 @@
 /* veriables 
 -----------------*/
 :root {
-    --color-white: #eee;
+    /* --color-white: #eee;
+    --color-gold: #ffd700; */
+    --color-white: #fbfbfb;
     --color-gold: #ffd700;
     --color-black: #222;
     --font-family: Comfortaa;
@@ -87,7 +89,7 @@ nav .button {
     font-weight: bold;
     cursor: pointer;
 }
-nav .button {
+nav h2 {
     margin-top: 2rem;
 }
 .accordion > label:hover,
@@ -100,6 +102,7 @@ nav .button:hover {
 }
 .accordion > .list > a {
     margin: 2px 0;
+    font-weight: 600;
     padding: .25rem 1.5rem; /* 4px 24px */
 }
 .accordion > input:checked ~ .list {
