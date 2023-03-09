@@ -9,54 +9,40 @@
 <link rel="stylesheet" href="./normalize.css">
 <link rel="stylesheet" href="./main.css">
 </head>
-<!-- Страница, лист 💡 -->
+<!-- page 💡 -->
 <body>
-    <div class="container flex">
-        <nav class="nav">
-            <h2>Шпаргалки</h2>
-            <div class="accordion"> 
-                <input type="radio" name="accordion" 
-                id="action1"> 
-                <label for="action1">flex</label> 
-                <div class="list">
-                    
-                </div>
-            </div> 
-            <div class="accordion"> 
-                <input type="radio" name="accordion" 
-                id="action2"> 
-                <label for="action2">grid</label> 
-                <div class="list">
-                    
-                </div>
+    <!-- common container -->
+    <div class="container">
+        <!-- navigation -->
+        <div class="nav-bar">
+            <!-- section 1 -->
+            <div class="nav-bar__item">
+                <!-- title -->
+                <h1>Шпаргалки</h1>
+                <!-- links -->
+                <a href="./pages/float-clear.html" class="nav-bar__link" target="iframe">float/clear</a>
+                <a href="./pages/audio-video.html" class="nav-bar__link" target="iframe">audio/video</a>
+                <a href="./pages/area-map.html" class="nav-bar__link" target="iframe">area/map</a>
+                <a href="./pages/column-count.html" class="nav-bar__link" target="iframe">column-count</a>
+                <a href="./pages/flex.html" class="nav-bar__link" target="iframe">flex</a>
+                <a href="./pages/form.html" class="nav-bar__link" target="iframe">form</a>
+                <a href="./pages/normalize.html" class="nav-bar__link" target="iframe">normalize</a>
+                <a href="./pages/reset.html" class="nav-bar__link" target="iframe">reset</a>
+                <a href="./pages/table.html" class="nav-bar__link" target="iframe">table</a>
             </div>
-            <div class="accordion"> 
-                <input type="radio" name="accordion" 
-                id="action3"> 
-                <label for="action3">table</label> 
-                <div class="list">
-                    <a href="./pages/table.html" target="iframe" class="link" >table</a>
-                    <a href="./pages/table-maket.html" target="iframe" class="link" >table :: макет</a>
-                </div>
-            </div> 
-            <div class="accordion"> 
-                <input type="radio" name="accordion" 
-                id="action99"> 
-                <label for="action99">others</label> 
-                <div class="list">
-                    <a href="./pages/column-count.html" target="iframe" class="link" >column-count</a>
-                    <a href="./pages/audio-video.html" target="iframe" class="link" >audio/video</a>
-                    <a href="./pages/normalize.html" target="iframe" class="link" >normalize.css</a>
-                    <a href="./pages/reset.html" target="iframe" class="link" >reset.css</a>
-                    <a href="./pages/float-clear.html" target="iframe" class="link" >float/clear</a>
-                </div>
+            <!-- section 2 -->
+            <div class="nav-bar__item">
+                <!-- title -->
+                <h1>Наработки</h1>
+                <!-- link -->
+                <a href="./pages/table-maket.html" class="nav-bar__link" target="iframe">table-maket</a>
             </div>
-            <h2>Ссылки</h2>
-            <a class="button" href="#" class="portfolio">portfolio</a>
-        </nav>
-        <main class="main">
-            <iframe class="iframe" src="./pages/home.html" name="iframe"></iframe>
-        </main>
+        </div>
+        <!-- container for iframe -->
+        <div class="window">
+            <!-- iframe -->
+            <iframe src="./pages/home.html" frameborder="0" name="iframe"></iframe>
+        </div>
     </div>
 </body>
 </html>
