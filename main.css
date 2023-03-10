@@ -1,9 +1,9 @@
 /* --- variable --- */
 :root {
-    --1: #11999E;
-    --2: #30E3CA;
-    --3: #E4F9F5;
-    --4: #40514E;
+    --1: #02bcc3;
+    --2: #39e3cd;
+    --3: #efefef;
+    --4: #3b4543;
 }
 
 /* --- page --- */
@@ -27,34 +27,34 @@ body {
     gap: 50px;
 }
 
-/* --- title --- */
-h1 {
-    font-weight: bold;
-}
-
 /* --- iframe --- */
 .window > iframe {
     width: 100%;
     height: 100%;
 }
 
+/* --- section > title --- */
+.nav-bar__item > h1 {
+    font-weight: bold;
+}
+
 /* --- links --- */
-.nav-bar__item > a {
+.nav-bar__link {
     display: block;
     padding: 4px 12px;
     color: var(--3);
     background-color: var(--4);
 
-    border-radius: 5px;
+    border-radius: 3px;
     text-decoration: none;
 
     transition: .15s;
 }
-.nav-bar__item > a:hover {
+.nav-bar__link:hover {
     color: var(--3);
     background-color: var(--1);
 }
-.nav-bar__item > a + a {
+.nav-bar__link + .nav-bar__link {
     margin-top: 4px;
 }
 
