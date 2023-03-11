@@ -1,66 +1,78 @@
+
 /* --- variable --- */
 :root {
-    --1: #02bcc3;
-    --2: #39e3cd;
-    --3: #efefef;
-    --4: #3b4543;
+  --black: #333;
+  --white: #eee;
+  --tomato: #ff6347;
 }
 
 /* --- page --- */
 body {
-    font-family: Comfortaa;
-    font-size: 100%;
-    background-color: var(--3);
-    color: var(--4);
+  font-family: Comfortaa;
+  font-size: 100%;
 }
 
-/* --- container --- */
+/* --- common container --- */
 .container {
-    max-width: 1200px;
-    width: 100%;
-    height: 95vh;
-    margin: 10px auto;
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  grid-template-rows: auto;
+  gap: 24px;
 
-    display: grid;
-    grid-template-columns: 200px 1fr;
-    grid-template-rows: auto;
-    gap: 50px;
+  max-width: 1200px;
+  width: 100%;
+  height: 100vh;
+  margin: 0 auto;
 }
 
-/* --- iframe --- */
-.window > iframe {
-    width: 100%;
-    height: 100%;
+/* --- iframe [window for contents] --- */
+.iframe {
+  width: 100%;
+  max-height: 650px;
+  height: 100%;
+  margin-top: 12px;
 }
 
-/* --- section > title --- */
-.nav-bar__item > h1 {
-    font-weight: bold;
+/* --- nav --- */
+.nav {
+  margin-top: 12px;
+  padding-right: 12px;
+
+  overflow-y: scroll;
 }
 
-/* --- links --- */
-.nav-bar__link {
-    display: block;
-    padding: 4px 12px;
-    color: var(--3);
-    background-color: var(--4);
+/* --- title nav --- */
+.nav__title {
+  padding-inline: 8px;
 
-    border-radius: 3px;
-    text-decoration: none;
+  font-size: 32px;
+  text-align: center;
 
-    transition: .15s;
-}
-.nav-bar__link:hover {
-    color: var(--3);
-    background-color: var(--1);
-}
-.nav-bar__link + .nav-bar__link {
-    margin-top: 4px;
+  background-color: var(--tomato);
 }
 
+/* --- list --- */
+.nav__list { 
+  list-style-type: none; 
+  
+  border-left: 4px solid var(--tomato);
+}
 
+/* --- link --- */
+.nav__link {
+  display: block;
+  padding: 4px 8px;
 
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: var(--b);
 
+  transition: font-size .3s;
+}
+.nav__link:hover { 
+  font-size: 20px; 
+  color: var(--tomato);
+}
 
-
-
+/* ---  --- */

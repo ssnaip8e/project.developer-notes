@@ -1,48 +1,50 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-<meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Developer Note's</title>
-<link rel="stylesheet" href="./fonts/comfortaa.css">
-<link rel="stylesheet" href="./normalize.css">
-<link rel="stylesheet" href="./main.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Developer Note's</title>
+  <link rel="stylesheet" href="./fonts/comfortaa.css">
+  <link rel="stylesheet" href="./normalize.css">
+  <link rel="stylesheet" href="./main.css">
 </head>
 <!-- page 💡 -->
 <body>
-    <!-- common container -->
-    <div class="container">
-        <!-- navigation -->
-        <div class="nav-bar">
-            <!-- section 1 -->
-            <div class="nav-bar__item">
-                <!-- title -->
-                <h1>Шпаргалки</h1>
-                <!-- links -->
-                <a href="./pages/float-clear.html" class="nav-bar__link" target="iframe">float/clear</a>
-                <a href="./pages/audio-video.html" class="nav-bar__link" target="iframe">audio/video</a>
-                <a href="./pages/area-map.html" class="nav-bar__link" target="iframe">area/map</a>
-                <a href="./pages/column-count.html" class="nav-bar__link" target="iframe">column-count</a>
-                <a href="./pages/flex.html" class="nav-bar__link" target="iframe">flex</a>
-                <a href="./pages/form.html" class="nav-bar__link" target="iframe">form</a>
-                <a href="./pages/normalize.html" class="nav-bar__link" target="iframe">normalize</a>
-                <a href="./pages/reset.html" class="nav-bar__link" target="iframe">reset</a>
-                <a href="./pages/table.html" class="nav-bar__link" target="iframe">table</a>
-            </div>
-            <!-- section 2 -->
-            <div class="nav-bar__item">
-                <!-- title -->
-                <h1>Наработки</h1>
-                <!-- link -->
-                <a href="./pages/table-maket.html" class="nav-bar__link" target="iframe">table-maket</a>
-            </div>
+  <!-- common container -->
+  <div class="container">
+    <!-- navigation -->
+    <nav class="nav">
+      <!-- nav__unit [ячейка] -->
+      <div class="nav__unit">
+          <!-- title -->
+          <h2 class="nav__title">Шпаргалки</h2>
+          <!-- list -->
+          <ul class="nav__list">
+            <!-- item + link -->
+            <li class="nav__item"><a class="nav__link" href="./pages/audio-video.html" target="iframe">audio/video</a></li>
+            <li class="nav__item"><a class="nav__link" href="./pages/area-map.html" target="iframe">area/map</a></li>
+            <li class="nav__item"><a class="nav__link" href="./pages/column-count.html" target="iframe">column-count</a></li>
+            <li class="nav__item"><a class="nav__link" href="./pages/float-clear.html" target="iframe">float/clear</a></li>
+            <li class="nav__item"><a class="nav__link" href="./pages/normalize.html" target="iframe">normalize</a></li>
+            <li class="nav__item"><a class="nav__link" href="./pages/reset.html" target="iframe">reset</a></li>
+            <li class="nav__item"><a class="nav__link" href="./pages/table.html" target="iframe">table</a></li>
+          </ul>
         </div>
-        <!-- container for iframe -->
-        <div class="window">
-            <!-- iframe -->
-            <iframe src="./pages/home.html" frameborder="0" name="iframe"></iframe>
+        <!-- nav__unit [ячейка] -->
+        <div class="nav__unit">
+          <!-- title -->
+          <h2 class="nav__title">Наработки</h2>
+          <!-- list -->
+          <ul class="nav__list">
+            <!-- item + link -->
+            <li class="nav__item"><a class="nav__link" href="./pages/table-maket.html" target="iframe">table-maket</a></li>
+          </ul>
         </div>
+      </nav>
+      <!-- iframe -->
+      <iframe class="iframe" src="" frameborder="0" name="iframe"></iframe>
     </div>
+  </div>
 </body>
 </html>
