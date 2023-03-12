@@ -144,30 +144,32 @@ td:hover { background-color: var(--tomato); /* при наведении выд�
 .accordion > label {
   display: block;
   color: var(--white);
-  background-color: var(--lightgray);
+  background-color: var(--black);
   margin: 1px;
-  padding: 3px;
+  padding: 3px 12px;
   cursor: pointer;
 }
-.accordion > nav {
+.accordion > div {
   display: none;
   padding: 3px;
 }
-.accordion > nav > a {
-  display: block;
-  margin: 5px;
-}
-.accordion > input:checked ~ nav { display: block; }
+.accordion > input:checked ~ div { display: block; }
+
+/* --- spoiler-2 --- */
 .tab input { display: none; }
 .tab label {
   display: block;
   width: 100px;
   padding: 4px 8px;
-  border: 1px dotted #333;
+  border-left: 4px solid var(--tomato);
+  border-top: 4px solid var(--tomato);
 }
+.tab + .tab { margin-top: 10px;}
 .content {
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.3s;
+  border-left: 4px solid var(--tomato);
+  border-right: 4px solid var(--tomato);
 }
 .tab input:checked ~ .content { max-height: 100vh; }
