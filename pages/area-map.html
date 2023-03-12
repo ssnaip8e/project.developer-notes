@@ -1,91 +1,117 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-   <meta charset="UTF-8">
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <title>Developer Note's</title>
-   <link rel="stylesheet" href="../index.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>area/map</title>
+  <link rel="stylesheet" href="./../styles/main-pages.css">
 </head>
-<!-- Страница, лист -->
-<body class="body" id="home-page">
-  <div class="wrapper">
-    <nav class="nav">
-      <div class="container">
-        <ul class="nav-list">
-          <li class="nav-list__item"><a href="../index.html" class="nav-list__link">Главная</a></li>
-          <li class="nav-list__item"><a href="#" class="nav-list__link">Портфолио</a></li>
-        </ul>
-      </div>
-    </nav>
-    <header class="header">
-      <div class="container">
-        <h1 class="header__title">Developer note's <br>[Записки разработчика]</h1>
-      </div>
-    </header>
-    <main class="main">
-        <div class="container">
-          <section class="section">
-            <h2 class="section__title">Area/Map [Карта-изображение]</h2>
-            <p class="section__text">Создание навигации через сетку координатов описывающих области на </p>
-          </section>
-          <section class="section">
-            <pre class="section__pre">
-              <code class="section__code">
-  /* ====================
-         Структура 
-  ====================== */
+<body>
+  <div class="container">
+    <h1 class="title">Area/Map [Карта-изображение]</h1>
+    <p>
+      Создание навигации через сетку координатов описывающих области на изображении
+    <p>
+    <div class="codebox">
+      <pre>
+        <code>
+    /* ====================
+          Структура 
+    ====================== */
 
-  /* теги */
+    /* --- теги --- */
 
-  map &ndash; создание карты
-  area &ndash; создание области
-  img &ndash; создание графического изображения
+      map &ndash; создание карты
+      area &ndash; создание области
+      img &ndash; создание графического изображения
 
-  /* атрибуты */
+    /* --- атрибуты --- */
 
-  shape  &ndash; задает форму области:
-    [rect] - прямоугольная область x1, y1, x2, y2 
-      (x1, y1 - координаты левого верхнего угла, 
-      x2, y2 - координаты правого нижнего угла)
-    [circle] - круглая область x, y, r 
-      (x, y - координаты центра, r - радиус)
-    [poly] - полигональная область x1, y1, x2, y2, ... xn, yn 
-      (xi, yi - координаты i-й вершины полигона)
+      shape  &ndash; задает форму области:
+        [rect] - прямоугольная область x1, y1, x2, y2 
+          (x1, y1 - координаты левого верхнего угла, 
+          x2, y2 - координаты правого нижнего угла)
+        [circle] - круглая область x, y, r 
+          (x, y - координаты центра, r - радиус)
+        [poly] - полигональная область x1, y1, x2, y2, ... xn, yn 
+          (xi, yi - координаты i-й вершины полигона)
 
-  coords &ndash; задает размер области
-  href &ndash; задает адресс ссылки
-  target &ndash; открывает ссылку в заданном значении атрибута
-  title &ndash; задает подсказку для ссылки
-  download &ndash; задает скачивание файла
-  usemap &ndash; задает название графическому изображению для создания карты
-  name &ndash; устанавливает название графического изображения созданное для карты
-  nohref &ndash; делает область неактивной. Обязательно область [nohref] должна идти первой.
+      coords &ndash; задает размер области
+      href &ndash; задает адресс ссылки
+      target &ndash; открывает ссылку в заданном значении атрибута
+      title &ndash; задает подсказку для ссылки
+      download &ndash; задает скачивание файла
+      usemap &ndash; задает название графическому изображению для создания карты
+      name &ndash; устанавливает название графического изображения созданное для карты
+      nohref &ndash; делает область неактивной. Обязательно область [nohref] должна идти первой.
 
-    &lt;area shape="circle" coords="50,50,20" title="Белый круг" nohref&gt;
-    &lt;area shape="circle" coords="50,50,50" title="Синий круг" href="#blue_link"&gt;
+    /* --- образец кода-1 --- */
 
-  /* ----------------------
-         Образец
-  ----------------------- */
+      &lt;area shape="circle" coords="50,50,20" title="Белый круг" nohref&gt;
+      &lt;area shape="circle" coords="50,50,50" title="Синий круг" href="#blue_link"&gt;
+
+    /* --- образец кода-2 --- */
   
-  &lt;img src="planets.gif" width="145" height="126" alt="Planets"
-  usemap="#planetmap"&gt;
-  
-  &lt;map name="planetmap"&gt;
-    &lt;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun"&gt;
-    &lt;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury"&gt;
-    &lt;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"&gt;
-  &lt;/map&gt;
-
-            </code>
-          </pre>
-        </section>
+      &lt;img src="planets.gif" width="145" height="126" alt="Planets"
+      usemap="#planetmap"&gt;
+    
+      &lt;map name="planetmap"&gt;
+        &lt;area shape="rect" coords="0,0,82,126" href="sun.htm" alt="Sun"&gt;
+        &lt;area shape="circle" coords="90,58,3" href="mercur.htm" alt="Mercury"&gt;
+        &lt;area shape="circle" coords="124,58,8" href="venus.htm" alt="Venus"&gt;
+      &lt;/map&gt;
+        </code>
+      </pre>
+    </div>
+    <h2 class="title">Пример (код после примера)</h2>
+    <div class="example-map">
+      <map name="map">
+        <area shape="rect" coords="0, 0, 402, 42" href="#area1">
+        <area shape="rect" coords="0, 42, 132, 204" href="#area2">
+        <area shape="poly" coords="260, 96, 331, 42, 403, 96, 377, 180, 286, 180" href="#area4">
+        <area shape="circle" coords="180, 100, 90" href="#area3">
+        <area shape="rect" coords="0, 0, 402, 204" href="#area5">
+      </map>
+      <img src="./../media/images/imagemap.gif" width="402" height="204" usemap="#map">
+      <div class="target">
+        <p>При нажатии на сектор (area) переход на указанный текст, который выделяется красноватым оттенком. Синий цвет на картинке, прямоугольный формы сектор (area5).</p>
+        <div id="area1">area1</div>
+        <div id="area2">area2</div>
+        <div id="area3">area3</div>
+        <div id="area4">area4</div>
+        <div id="area5">area5</div>
       </div>
-    </main>
-    <footer class="footer">
-      <p class="copy">&copy;&nbsp;2022-2023&nbsp;Все мои работы защищены моим трудолюбием.</p>  
-    </footer>
+    </div>
+    <div class="codebox">
+      <pre>
+        <code>
+          &lt;map name="map"&gt;
+            &lt;area shape="rect" coords="0, 0, 402, 42" href="#area1"&gt;
+            &lt;area shape="rect" coords="0, 42, 132, 204" href="#area2"&gt;
+            &lt;area shape="poly" coords="260, 96, 331, 42, 403, 96, 377, 180, 286, 180" href="#area4"&gt;
+            &lt;area shape="circle" coords="180, 100, 90" href="#area3"&gt;
+            &lt;area shape="rect" coords="0, 0, 402, 204" href="#area5"&gt;
+          &lt;/map&gt;
+          &lt;img src="./../media/images/imagemap.gif" width="402" height="204" usemap="#map"&gt;
+          &lt;div&gt;
+            &lt;div id="area1"&gt;area1&lt;/div&gt;
+            &lt;div id="area2"&gt;area2&lt;/div&gt;
+            &lt;div id="area3"&gt;area3&lt;/div&gt;
+            &lt;div id="area4"&gt;area4&lt;/div&gt;
+            &lt;div id="area5"&gt;area5&lt;/div&gt;
+          &lt;/div>
+        </code>
+      </pre>
+    </div>
+    <div class="codebox">
+      <pre>
+        <code>
+          &lt;video src="media/the_beatles_yesterday.mp4"
+          poster="images/the_beatles.png"&gt;&lt;/video&gt;
+        </code>
+      </pre>
+    </div>
   </div>
 </body>
 </html>
