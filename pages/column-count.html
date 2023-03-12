@@ -5,35 +5,18 @@
    <meta http-equiv="X-UA-Compatible" content="IE=edge">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>column-count</title>
-   <style>
-      body {
-         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-         font-size: 18px;
-         line-height: 1.4;
-         color: #222;
-      }
-      .container {
-         max-width: 800px;
-         margin: 0 auto;
-      }
-      .codebox {
-         background-color: #222;
-         color: #ffd700;
-         margin-bottom: 3rem;
-      }
-   </style>
+   <link rel="stylesheet" href="./../styles/main-pages.css">
 </head>
-<!-- Страница, лист -->
 <body>
    <div class="container">
-      <h1>Column-count [Многоколочность]</h1>
+      <h1 class="title">Column-count [Многоколочность]</h1>
       <p>
          Свойство <b>column-count</b> управляет количеством колонок, на которые будет разбит контент элемента.
       </p>
       <div class="codebox">
          <pre>
             <code>
-               column-count: n; // n - числовле значение
+               column-count: n; /*--- n - числовле значение --- */
                column-width: px/%/em/rem;
                column-gap: px/em/rem;
             </code>
@@ -45,9 +28,7 @@
       <div class="codebox">
          <pre>
             <code>
-               p {
-                  column-count: 3;
-               }
+               p { column-count: 3; }
             
                p {
                   column-count: auto;
@@ -65,6 +46,37 @@
                .text-wrapper {
                   column-count: 4;
                   column-width: 250px;
+               }
+            </code>
+         </pre>
+      </div>
+      <h2 class="title">Пример (код после примера)</h2>
+      <div class="example-col-count">
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iure corrupti nulla quasi at? Cupiditate exercitationem adipisci ipsa eius veniam deserunt quia culpa incidunt numquam impedit, at ab tempore in facere!
+         Voluptatum eveniet pariatur dolor rem quaerat dicta laudantium possimus ducimus asperiores recusandae repellendus molestiae reiciendis quisquam quis aliquid minima fugit saepe sit nisi totam, illo ex? Ea ipsa officiis consectetur.
+         Reiciendis quasi aliquid, aut est temporibus assumenda et iusto eos, labore non eius. Dolorum eligendi dolores, ullam officiis maiores delectus enim nulla placeat maxime ab ratione atque necessitatibus quisquam id.
+         Quam eaque consectetur quibusdam non maxime magni quaerat. Quis rerum velit ipsam pariatur distinctio porro quibusdam doloremque minima eos! Necessitatibus accusamus illum vitae. Sapiente officia voluptatem ex. Quia, temporibus veritatis.
+         Aliquid dignissimos provident quo dolor temporibus ad minima beatae id nesciunt architecto corrupti, omnis inventore cumque nulla expedita ut qui officiis laudantium unde labore nemo. In quisquam rem corporis suscipit!</p>
+      </div>
+      <div class="codebox">
+         <pre>
+            <code>
+               /* --- html --- */
+
+               &lt;div class="example"&gt;
+                  &lt;p&gt;Lorem*10&lt;/p&gt;
+               &lt;/div&gt;
+            </code>
+         </pre>
+      </div>
+      <div class="codebox">
+         <pre>
+            <code>
+               /* --- css --- */
+
+               .example-col-count > p {
+                  column-count: 3;
+                  column-width: 150px;
                }
             </code>
          </pre>
