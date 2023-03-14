@@ -14,7 +14,7 @@ body {
 }
 .container {
   max-width: 800px;
-  margin: 0 auto;
+  margin: 40px auto;
 }
 .container p {
   padding-inline: 2rem;
@@ -173,3 +173,11 @@ td:hover { background-color: var(--tomato); /* при наведении выд�
   border-right: 4px solid var(--tomato);
 }
 .tab input:checked ~ .content { max-height: 100vh; }
+
+/* --- rounded --- */
+.example-rounded > img { 
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+

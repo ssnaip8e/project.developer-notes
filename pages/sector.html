@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>pie chart with pure</title>
+  <style>
+    .pie {
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background-image: conic-gradient(
+        red 0deg 45deg,
+        green 45deg 190deg,
+        blue 190deg 369deg
+      );
+    }
+    .legend {
+      display: grid;
+      grid-template-columns: 50px auto;
+    }
+    .segment1 {background-color: red;}
+    .segment2 {background-color: green;}
+    .segment3 {background-color: blue;}
+  </style>
+</head>
+<body>
+  <!-- pie chart -->
+  <div class="pie"></div>
+
+  <!-- legend -->
+  <div class="legend">
+    <div class="segment1"></div>
+    <div>first</div>
+    <div class="segment2"></div>
+    <div>second</div>
+    <div class="segment3"></div>
+    <div>third</div>
+  </div>
+
+</body>
+</html>
